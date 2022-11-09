@@ -1,0 +1,78 @@
+POST http://localhost:3307/users
+Content-Type: application/json
+
+{
+  "name": "Vladislau",
+  "surname": "Kovalev",
+  "patronymic": "Igorevich",
+  "date_of_birth": "14.08.2001",
+  "gender": 0,
+  "passport_series": "MP",
+  "passport_number": "5325436345",
+  "phone_number": "+375447688454",
+  "email": "vkov2001@gamil.com",
+  "employed": 1,
+  "citizenship": [
+    "BY"
+  ]
+}
+
+###
+POST http://localhost:3307/users
+Content-Type: application/json
+
+{
+  "name": "Egor",
+  "surname": "Shved",
+  "patronymic": "Aleksandrovich",
+  "date_of_birth": "17.06.2002",
+  "gender": 0,
+  "passport_series": "MP",
+  "passport_number": "4564364645",
+  "phone_number": "+375294252355",
+  "email": "Egoryusss@gmail.comn",
+  "employed": 1,
+  "citizenship": [
+    "BY"
+  ]
+}
+
+###
+GET http://localhost:3307/users
+Accept: application/json
+
+###
+PUT http://localhost:3307/users/17
+Content-Type: application/json
+
+{
+  "name": "Egor",
+  "surname": "Shved",
+  "patronymic": "Aleksandrovich",
+  "date_of_birth": "17.06.2002",
+  "gender": 0,
+  "passport_series": "MP",
+  "passport_number": "4564364645",
+  "phone_number": "+375294252355",
+  "email": "Egoryusss@gmail.comn",
+  "employed": 1,
+  "citizenship": [
+    "BY"
+  ]
+}
+
+###
+PATCH http://localhost:3307/users/1
+Content-Type: application/json-patch+json
+
+[
+  {
+    "op": "replace",
+    "path": "/name",
+    "value": "Ignat"
+  }
+]
+
+###
+DELETE http://localhost:3307/users/10
+Content-Type: application/json-patch+json
